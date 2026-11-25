@@ -17,10 +17,11 @@
         --band-2: #fdfaf3;
         --surface: #fffefa;
         --surface-2: #f8f2e4;
-        --tint: #f0e8f8;
-        --tint-strong: #e0d0f1;
-        --grand-bg: #fdf3b8;
-        --grand-ink: #4a3510;
+        --tint: #f3ead8;
+        --tint-strong: #eadfc4;
+        --grand-bg: #e6d5ac;
+        --grand-ink: #3f2d12;
+        --highlight-ink: #4a3510;
         --ink: #2c251b;
         --ink-soft: #4a4033;
         --muted: #7e7260;
@@ -45,10 +46,11 @@
           --band-2: #272219;
           --surface: #342d21;
           --surface-2: #3a3324;
-          --tint: #3b3150;
-          --tint-strong: #4c3d68;
-          --grand-bg: #e8d98f;
-          --grand-ink: #3d2b0f;
+          --tint: #f3ead8;
+          --tint-strong: #eadfc4;
+          --grand-bg: #e6d5ac;
+          --grand-ink: #3f2d12;
+          --highlight-ink: #4a3510;
           --ink: #eee5d2;
           --ink-soft: #d8ccb2;
           --muted: #b3a68c;
@@ -218,8 +220,10 @@
         border-top: 1px solid var(--line-strong); border-bottom: none; margin-top: 10px;
         padding: 13px 12px 11px;
         background: var(--tint);
-        font-size: 16.5px; color: var(--ink); font-weight: 500;
+        font-size: 16.5px; color: var(--highlight-ink); font-weight: 500;
       }
+      .sum-row.total .amt { color: var(--highlight-ink); }
+      .sum-row.total .lbl-note { color: var(--highlight-ink); opacity: .75; }
       .sum-row.grand {
         border: 1px solid var(--line-strong); border-left: none; border-right: none;
         border-top: 3px double var(--line-strong); border-bottom: 3px double var(--line-strong);
@@ -358,14 +362,15 @@
       .room-subtotal {
         display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
         padding: 16px 14px 13px; margin-top: 10px;
-        background: var(--tint);
+        background: var(--tint); color: var(--highlight-ink);
         border-top: 3px double var(--line-strong);
         font-family: "Cormorant Garamond", Georgia, serif; font-size: 21px; font-weight: 600;
         letter-spacing: .12em; text-transform: uppercase;
       }
-      .room-subtotal .amt { font-variant-numeric: tabular-nums; font-size: 24px; }
+      .room-subtotal .amt { font-variant-numeric: tabular-nums; font-size: 24px; color: var(--highlight-ink); }
       .room-subtotal + .room-subtotal { border-top: 1px solid var(--line-soft); padding: 11px 14px 10px; font-size: 18px; }
-      .room-subtotal.tax-total { background: var(--tint-strong); color: var(--accent-deep); font-weight: 700; }
+      .room-subtotal.tax-total { background: var(--tint-strong); color: var(--highlight-ink); font-weight: 700; }
+      .room-subtotal.tax-total .amt { color: var(--highlight-ink); }
       .room-subtotal + .room-subtotal .amt { font-size: 20px; }
 
       /* ---------- footer ---------- */
