@@ -19,6 +19,8 @@
         --surface-2: #f8f2e4;
         --tint: #f0e8f8;
         --tint-strong: #e0d0f1;
+        --grand-bg: #fdf3b8;
+        --grand-ink: #4a3510;
         --ink: #2c251b;
         --ink-soft: #4a4033;
         --muted: #7e7260;
@@ -45,6 +47,8 @@
           --surface-2: #3a3324;
           --tint: #3b3150;
           --tint-strong: #4c3d68;
+          --grand-bg: #e8d98f;
+          --grand-ink: #3d2b0f;
           --ink: #eee5d2;
           --ink-soft: #d8ccb2;
           --muted: #b3a68c;
@@ -219,12 +223,12 @@
       .sum-row.grand {
         border: 1px solid var(--line-strong); border-left: none; border-right: none;
         border-top: 3px double var(--line-strong); border-bottom: 3px double var(--line-strong);
-        background: var(--tint-strong); color: var(--accent-deep);
+        background: var(--grand-bg); color: var(--grand-ink);
         margin: 16px -46px 2px; padding: 22px 46px 24px;
-        font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(24px, 4vw, 31px); font-weight: 600;
-        letter-spacing: .05em; color: var(--ink);
+        font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(24px, 4vw, 31px); font-weight: 700;
+        letter-spacing: .05em;
       }
-      .sum-row.grand .amt { font-size: clamp(26px, 4.4vw, 34px); }
+      .sum-row.grand .amt { font-size: clamp(26px, 4.4vw, 34px); color: var(--grand-ink); font-weight: 700; }
       .sum-row .lbl-note { color: var(--muted); font-size: 13px; display: block; letter-spacing: .02em; font-style: italic; font-family: "Cormorant Garamond", Georgia, serif; font-size: 15px; }
       .sum-secondary { margin: 18px 0 0; font-size: 14.5px; color: var(--muted); line-height: 1.7; text-align: center; }
       .sum-secondary strong { color: var(--ink); font-weight: 500; }
@@ -450,15 +454,16 @@
           <div class="sum-row"><span>Bonus Room</span><span class="amt">$1,293.00</span></div>
           <div class="sum-row"><span>Outdoor</span><span class="amt">$146.00</span></div>
           <div class="sum-row total"><span>Furniture</span><span class="amt">$8,463.00</span></div>
-          <div class="sum-row"><span>Window Treatments &amp; Curtains</span><span class="amt">$1,554.10</span></div>
+          <div class="sum-row"><span>Window Treatments</span><span class="amt">$1,554.10</span></div>
           <div class="sum-row"><span>Additional Items (estimates)</span><span class="amt">$5,245.00</span></div>
+          <div class="sum-row total"><span>Subtotal</span><span class="amt">$15,262.10</span></div>
+          <div class="sum-row"><span>Tax (8.25%)</span><span class="amt">$1,259.12</span></div>
+          <div class="sum-row total"><span>Subtotal incl. tax</span><span class="amt">$16,521.22</span></div>
           <div class="sum-row"><span>Interior Design</span><span class="amt">$2,000.00</span></div>
           <div class="sum-row"><span>Assembly</span><span class="amt">$1,000.00</span></div>
-          <div class="sum-row total"><span>Subtotal</span><span class="amt">$18,262.10</span></div>
-          <div class="sum-row"><span>Sales Tax (8.25%, on furniture, window treatments &amp; additional goods)</span><span class="amt">$1,259.12</span></div>
-          <div class="sum-row grand"><span>Grand Total (incl. Tax)</span><span class="amt">$19,521.22</span></div>
+          <div class="sum-row grand"><span>GRAND TOTAL</span><span class="amt">$19,521.22</span></div>
         </div>
-        <p class="sum-secondary">The Grand Total includes everything on this page: furniture, window treatments, the Additional Items estimates, <strong>Interior Design $2,000</strong> and <strong>Assembly $1,000</strong>, plus tax.</p>
+        <p class="sum-secondary">Tax applies to furniture, window treatments and the Additional Items goods only. <strong>Interior Design $2,000</strong> and <strong>Assembly $1,000</strong> are service fees added last, after tax — no sales tax applies to them.</p>
       </div>
 
       <!-- Scope: what's included / not included -->
@@ -834,7 +839,7 @@
           <h2>Additional Items — Estimates</h2>
           <div class="head-rule" aria-hidden="true"></div>
         </div>
-        <p class="sum-secondary" style="text-align:left; margin:0 0 6px">The following are estimates and service fees — all of them are <strong>included in the Grand Total</strong> in the Summary below.</p>
+        <p class="sum-secondary" style="text-align:left; margin:0 0 6px">The following are estimates for goods — all of them are <strong>included in the Grand Total</strong> in the Summary below. Interior Design ($2,000) and Assembly ($1,000) are service fees added at the very end of the Summary, after tax — no sales tax applies to them, so they are not listed in this section.</p>
         <div class="items">
           <div class="item">
             <div><div class="item-name">Guest Bedroom 1 Mattress, Pillows &amp; Bedding</div></div>
@@ -868,19 +873,11 @@
             <div><div class="item-name">Speakers (Set of 2)</div></div>
             <div class="item-right"><span class="item-price">$340</span></div>
           </div>
-          <div class="item">
-            <div><div class="item-name">Interior Design</div><div class="item-detail">Service fee — no sales tax</div></div>
-            <div class="item-right"><span class="item-price">$2,000</span></div>
-          </div>
-          <div class="item">
-            <div><div class="item-name">Assembly</div><div class="item-detail">Service fee — no sales tax</div></div>
-            <div class="item-right"><span class="item-price">$1,000</span></div>
-          </div>
         </div>
         <div class="room-subtotal"><span>Goods Estimates Subtotal (Pre-Tax)</span><span class="amt">$5,245</span></div>
         <div class="room-subtotal"><span>Sales Tax (8.25%, on goods)</span><span class="amt">$432.71</span></div>
-        <div class="room-subtotal"><span>Interior Design + Assembly (services, no tax)</span><span class="amt">$3,000</span></div>
-        <div class="room-subtotal tax-total"><span>Additional Items Total</span><span class="amt">$8,677.71</span></div>
+        <div class="room-subtotal tax-total"><span>Additional Items Total incl. Tax</span><span class="amt">$5,677.71</span></div>
+        <p class="sum-secondary" style="text-align:left; margin:14px 0 0">Interior Design ($2,000) and Assembly ($1,000) are not included above — they are added at the very end of the Summary below, after tax, with no sales tax.</p>
       </section>
 
       <!-- ============ SUMMARY ============ -->
@@ -900,15 +897,16 @@
           <div class="sum-row"><span>Bonus Room</span><span class="amt">$1,293.00</span></div>
           <div class="sum-row"><span>Outdoor</span><span class="amt">$146.00</span></div>
           <div class="sum-row total"><span>Furniture</span><span class="amt">$8,463.00</span></div>
-          <div class="sum-row"><span>Window Treatments &amp; Curtains</span><span class="amt">$1,554.10</span></div>
+          <div class="sum-row"><span>Window Treatments</span><span class="amt">$1,554.10</span></div>
           <div class="sum-row"><span>Additional Items (estimates)</span><span class="amt">$5,245.00</span></div>
+          <div class="sum-row total"><span>Subtotal</span><span class="amt">$15,262.10</span></div>
+          <div class="sum-row"><span>Tax (8.25%)</span><span class="amt">$1,259.12</span></div>
+          <div class="sum-row total"><span>Subtotal incl. tax</span><span class="amt">$16,521.22</span></div>
           <div class="sum-row"><span>Interior Design</span><span class="amt">$2,000.00</span></div>
           <div class="sum-row"><span>Assembly</span><span class="amt">$1,000.00</span></div>
-          <div class="sum-row total"><span>Subtotal</span><span class="amt">$18,262.10</span></div>
-          <div class="sum-row"><span>Sales Tax (8.25%, on furniture, window treatments &amp; additional goods)</span><span class="amt">$1,259.12</span></div>
-          <div class="sum-row grand"><span>Grand Total (incl. Tax)</span><span class="amt">$19,521.22</span></div>
+          <div class="sum-row grand"><span>GRAND TOTAL</span><span class="amt">$19,521.22</span></div>
           </div>
-          <p class="sum-secondary">The Grand Total includes everything on this page: furniture, window treatments, the Additional Items estimates, <strong>Interior Design $2,000</strong> and <strong>Assembly $1,000</strong>, plus tax.</p>
+          <p class="sum-secondary">Tax applies to furniture, window treatments and the Additional Items goods only. <strong>Interior Design $2,000</strong> and <strong>Assembly $1,000</strong> are service fees added last, after tax — no sales tax applies to them.</p>
         </div>
         <p class="bottom-pro-note">All prices shown are Pro (trade) prices — professional discounts already applied, below regular retail pricing.</p>
         <p class="scope-footnote"><strong>Please note — scope of this proposal:</strong> The Grand Total above covers everything listed in this proposal — the furniture, rugs, lighting, wall art, mirrors, window blinds and curtains, plus the mattress, bedding, appliance and TV estimates in the Additional Items — Estimates section, Interior Design and Assembly. It does <strong>not</strong> include small decorative accessories &amp; styling decor (such as vases, books, trays, candles and other tabletop items shown in renderings); if needed, those will be quoted separately.</p>
